@@ -12,7 +12,7 @@ namespace Draw_Triangle
 {
     public partial class mainDisplay : Form
     {
-        Pen drawpen = new Pen(Color.Black);
+        Pen pen;
         Random ranGen = new Random();
         
         public mainDisplay()
@@ -20,13 +20,13 @@ namespace Draw_Triangle
             InitializeComponent();
             
         }
-        public void drawTriangle(int xOne, int xTwo, int xThree, int yOne, int yTwo, int yThree)
+        public void DrawTriangle(int xOne, int xTwo, int xThree, int yOne, int yTwo, int yThree)
         {
             Graphics g = this.CreateGraphics();
             g.Clear(Color.White);
-            g.DrawLine(drawpen, xOne, yOne, xTwo, yTwo);
-            g.DrawLine(drawpen, xTwo, yTwo, xThree, yThree);
-            g.DrawLine(drawpen, xOne, yOne, xThree, yThree);
+            g.DrawLine(pen, xOne, yOne, xTwo, yTwo);
+            g.DrawLine(pen, xTwo, yTwo, xThree, yThree);
+            g.DrawLine(pen, xOne, yOne, xThree, yThree);
         }
         private void drawTri_Click(object sender, EventArgs e)
         {
@@ -36,7 +36,7 @@ namespace Draw_Triangle
             int valueYOne = ranGen.Next(50, 300);
             int valueYTwo = ranGen.Next(50, 300);
             int valueYThree = ranGen.Next(50, 300);
-            drawTriangle(valueOne, valueTwo, valueThree, valueYOne, valueYTwo, valueYThree);
+            DrawTriangle(valueOne, valueTwo, valueThree, valueYOne, valueYTwo, valueYThree);
         }
     }
 }
