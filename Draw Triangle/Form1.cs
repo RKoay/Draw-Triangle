@@ -12,22 +12,31 @@ namespace Draw_Triangle
 {
     public partial class mainDisplay : Form
     {
-        Pen drawpen;
-        Graphics g;
-
+        Pen drawpen = new Pen(Color.Black);
+        Random ranGen = new Random();
+        
         public mainDisplay()
         {
             InitializeComponent();
             
         }
-        public void drawTriangle(double xOne, double xTwo, double xThree, double yOne, double yTwo, double yThree)
+        public void drawTriangle(int xOne, int xTwo, int xThree, int yOne, int yTwo, int yThree)
         {
             Graphics g = this.CreateGraphics();
+            g.Clear(Color.White);
             g.DrawLine(drawpen, xOne, yOne, xTwo, yTwo);
+            g.DrawLine(drawpen, xTwo, yTwo, xThree, yThree);
+            g.DrawLine(drawpen, xOne, yOne, xThree, yThree);
         }
-        private void mainDisplay_Load(object sender, EventArgs e)
+        private void drawTri_Click(object sender, EventArgs e)
         {
-
+            int valueOne = ranGen.Next(1, 200);
+            int valueTwo = ranGen.Next(1, 200);
+            int valueThree = ranGen.Next(1, 200);
+            int valueYOne = ranGen.Next(1, 200);
+            int valueYTwo = ranGen.Next(1, 200);
+            int valueYThree = ranGen.Next(1, 200);
+            drawTriangle(valueOne, valueTwo, valueThree, valueYOne, valueYTwo, valueYThree);
         }
     }
 }

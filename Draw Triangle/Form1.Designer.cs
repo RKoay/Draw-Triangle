@@ -28,21 +28,34 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.drawTri = new System.Windows.Forms.Button();
             this.SuspendLayout();
+            // 
+            // drawTri
+            // 
+            this.drawTri.Location = new System.Drawing.Point(154, 28);
+            this.drawTri.Name = "drawTri";
+            this.drawTri.Size = new System.Drawing.Size(152, 39);
+            this.drawTri.TabIndex = 0;
+            this.drawTri.Text = "Draw The Triangle";
+            this.drawTri.UseVisualStyleBackColor = true;
+            this.drawTri.Click += new System.EventHandler(this.drawTri_Click);
             // 
             // mainDisplay
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(452, 334);
+            this.Controls.Add(this.drawTri);
             this.Name = "mainDisplay";
             this.Text = "Drawing Triangle ";
-            this.Load += new System.EventHandler(this.mainDisplay_Load);
             this.ResumeLayout(false);
 
         }
 
         #endregion
+
+        private System.Windows.Forms.Button drawTri;
     }
 }
 
