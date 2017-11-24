@@ -33,9 +33,9 @@ namespace Draw_Triangle
             int valueOne = ranGen.Next(1, 200);
             int valueTwo = ranGen.Next(1, 200);
             int valueThree = ranGen.Next(1, 200);
-            int valueYOne = ranGen.Next(1, 200);
-            int valueYTwo = ranGen.Next(1, 200);
-            int valueYThree = ranGen.Next(1, 200);
+            int valueYOne = ranGen.Next(50, 300);
+            int valueYTwo = ranGen.Next(50, 300);
+            int valueYThree = ranGen.Next(50, 300);
             drawTriangle(valueOne, valueTwo, valueThree, valueYOne, valueYTwo, valueYThree);
         }
     }
