@@ -20,11 +20,10 @@ namespace Draw_Triangle
             InitializeComponent();
             
         }
-        public void DrawTriangle(int penOne, int penTwo, int penThree, int penFour, int xOne, int xTwo, int xThree, int yOne, int yTwo, int yThree)
+        public void DrawTriangle(Pen pen, int xOne, int yOne, int xTwo, int yTwo, int xThree, int yThree)
         {
             Graphics g = this.CreateGraphics();
-
-            pen.Color = Color.FromArgb(penOne, penTwo, penThree, penFour);
+            
             g.DrawLine(pen, xOne, yOne, xTwo, yTwo);
             g.DrawLine(pen, xTwo, yTwo, xThree, yThree);
             g.DrawLine(pen, xOne, yOne, xThree, yThree);
@@ -41,7 +40,7 @@ namespace Draw_Triangle
             int valueYOne = ranGen.Next(50, 300);
             int valueYTwo = ranGen.Next(50, 300);
             int valueYThree = ranGen.Next(50, 300);
-            DrawTriangle(penNumberOne, penNumberTwo, penNumberThree, penNumberFour, valueOne, valueTwo, valueThree, valueYOne, valueYTwo, valueYThree);
+            DrawTriangle(pen, valueOne, valueTwo, valueThree, valueYOne, valueYTwo, valueYThree);
         }
     }
 }
