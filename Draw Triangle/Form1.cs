@@ -30,10 +30,6 @@ namespace Draw_Triangle
         }
         private void drawTri_Click(object sender, EventArgs e)
         {
-            int penNumberOne = ranGen.Next(1, 255);
-            int penNumberTwo = ranGen.Next(1, 255);
-            int penNumberThree = ranGen.Next(1, 255);
-            int penNumberFour = ranGen.Next(1, 255);
             int valueOne = ranGen.Next(1, 200);
             int valueTwo = ranGen.Next(1, 200);
             int valueThree = ranGen.Next(1, 200);
